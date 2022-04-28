@@ -12,10 +12,40 @@
 }
 
 body {
+    background-image: url(../images/pescadores-alba-anguela.jpg);
+    background-position: center;
+    background-size: cover;
     font-family: 'Anek Tamil', sans-serif;
     font-size: 1em;
-    background: whitesmoke;
     min-height: 100vh;
+}
+
+nav {
+    padding: 10px;
+    font-size: large;
+
+}
+
+a:link {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    text-decoration: none;
 }
 
 .flashcards {
@@ -27,13 +57,12 @@ body {
 
 .flashcard {
     margin-top: 150px;
-    width: 370px;
-    height: 200px;
+    width: 550px;
+    height: 290px;
     border-radius: 5px;
     word-wrap: break-word;
     cursor: pointer;
     perspective: 1000px;
-    cursor: pointer;
 
 }
 
@@ -60,9 +89,9 @@ body {
 
 .flashcard__face--front {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; */
     background-color: aqua;
     position: absolute;
 }
@@ -98,10 +127,18 @@ button {
     border-radius: 3px;
     box-shadow: 3px 3px 2px orangered;
     background: white;
+    cursor: pointer;
 }
 
 .counter {
     margin: 10px;
     font-style: oblique;
     font-size: 0.7rem;
+}
+
+iframe {
+    margin: 10px;
+    border-radius: 8px;
+    min-width: 480px;
+    min-height: 270px;
 }

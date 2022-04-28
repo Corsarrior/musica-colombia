@@ -34,6 +34,7 @@ button {
     border-radius: 3px;
     box-shadow: 3px 3px 2px orangered;
     background: white;
+    cursor: pointer;
 }
 
 
@@ -65,16 +66,14 @@ button {
 }
 
 .flashcard {
-    width: 370px;
-    height: 200px;
+    margin-top: 150px;
+    width: 550px;
+    height: 290px;
     border-radius: 5px;
     word-wrap: break-word;
-    margin: 1em;
-    /* background: #fff; */
     cursor: pointer;
-
     perspective: 1000px;
-    cursor: pointer;
+
 }
 
 .flashcard__inner {
@@ -100,9 +99,9 @@ button {
 
 .flashcard__face--front {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     background-color: aqua;
     position: absolute;
 }
@@ -126,4 +125,11 @@ button {
 
 .fa-minus:hover {
     color: red;
+}
+
+iframe {
+    margin: 10px;
+    border-radius: 8px;
+    min-width: 480px;
+    min-height: 270px;
 }

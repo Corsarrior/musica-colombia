@@ -28,20 +28,25 @@ function flashCardMaker(text, delThisIndex) {
     const flashcardInner = document.createElement("div");
     const flashcardFaceFront = document.createElement("div");
     const flashcardFaceBack = document.createElement("div");
-    const answer = document.createElement("h2");
-    const question = document.createElement("h2");
+    // const answer = document.createElement("h2");
+    // const question = document.createElement("h2");
     const del = document.createElement("i");
+    const iframe = document.createElement("iframe");
 
     flashcard.className = "flashcard"
     flashcardInner.className = "flashcard__inner"
     flashcardFaceFront.className = "flashcard__face flashcard__face--front"
     flashcardFaceBack.className = "flashcard__face flashcard__face--back"
+    iframe.className = "iframe"
 
-    question.setAttribute("style", "padding: 15px");
-    question.textContent = text.myQuestion;
+    iframe.setAttribute("src", `${text.myQuestion}`);
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("type", "text/html");
+    // src = "" type = "text/html" data - video="" frameborder = "0"
+    // question.textContent = text.myQuestion;
 
-    answer.setAttribute("style", "text-align:center; color:red");
-    answer.textContent = text.myAnswer;
+    // answer.setAttribute("style", "text-align:center; color:red");
+    flashcardFaceBack.textContent = text.myAnswer;
 
     del.textContent = "x";
     del.className = "fa-minus";
@@ -54,9 +59,8 @@ function flashCardMaker(text, delThisIndex) {
     flashcard.appendChild(flashcardInner);
     flashcardInner.appendChild(flashcardFaceFront)
     flashcardInner.appendChild(flashcardFaceBack)
-    flashcardFaceFront.appendChild(question);
+    flashcardFaceFront.appendChild(iframe);
     flashcardFaceFront.appendChild(del);
-    flashcardFaceBack.appendChild(answer);
 
     flashcardInner.addEventListener("click", () => {
         flashcardInner.classList.toggle("is-fliped");

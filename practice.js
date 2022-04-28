@@ -29,11 +29,13 @@ function getPrevCard() {
 
 function flashCardMaker(text, delThisIndex) {
 
-    const flashcardFaceFront = document.querySelector(".flashcard__face--front h2");
+    const iframe = document.querySelector("iframe");
     const flashcardFaceBack = document.querySelector(".flashcard__body");
     const counter = document.querySelector(".counter");
 
-    flashcardFaceFront.textContent = text.myQuestion;
+    // iframe.src = text.myQuestion + "?showinfo=0&modestbranding=1";
+    iframe.src = text.myQuestion + "?autoplay=1&modestbranding=1&rel=0";
+    // modestbranding=1&controls=0&rel=0&
     flashcardFaceBack.textContent = text.myAnswer;
     console.log(cardIndex)
     counter.textContent = `${cardIndex + 1}/${contentArray.length}`;
