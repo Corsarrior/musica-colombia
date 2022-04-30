@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Flashcards</title>
+    <link rel="stylesheet" href="style/manager.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">flashcards</a></h1>
+        <div class="buttons">
+            <button class="button-add">agregar</button>
+            <button class="button-delete">borrar todo</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="create-card-container">
+                <div class="create-card">
+                    <h2>Crear flashcard</h2>
+                    <label for="question">pregunta </label>
+                    <textarea id="question"></textarea>
+                    <br>
+                    <label for="answer">respuesta</label>
+                    <textarea id="answer"></textarea>
+                    <div class="buttons">
+                        <button class="button-save">guardar</button>
+                        <button class="button-close">cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flashcards">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

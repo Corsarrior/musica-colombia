@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary: #FFCE00;
     --secondary: #FE4880;
@@ -5,54 +11,59 @@
     --light: #F3F3F3;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-image: url(../images/pescadores-alba-anguela.jpg);
-    background-position: center;
-    background-size: cover;
     font-family: 'Anek Tamil', sans-serif;
     font-size: 1em;
-    min-height: 100vh;
+    background: whitesmoke;
 }
 
-nav {
-    padding: 10px;
-    font-size: large;
-
+header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
-a:link {
-    color: #1a1a1a;
-    text-decoration: none;
+header h1 {
+    font-size: inherit;
 }
 
-/* visited link */
-a:visited {
-    color: #1a1a1a;
-    text-decoration: none;
+button {
+
+    padding: 0.35em;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 3px 3px 2px orangered;
+    background: white;
+    cursor: pointer;
 }
 
-/* mouse over link */
-a:hover {
-    color: hotpink;
-    text-decoration: none;
+
+.create-card {
+    margin: 2em;
+    padding: 1em;
+    border: 1.3px solid black;
+    box-shadow: 3px 3px 2px orangered;
+    border-radius: 5px;
+    /* background: aliceblue; */
+    box-shadow: 3px 3px 2px gray;
 }
 
-/* selected link */
-a:active {
-    text-decoration: none;
+.create-card textarea {
+    width: 100%;
+}
+
+.create-card button {
+    box-shadow: 3px 3px 2px gray;
 }
 
 .flashcards {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background: whitesmoke;
+    gap: 20px;
 }
 
 .flashcard {
@@ -64,6 +75,7 @@ a:active {
     cursor: pointer;
     perspective: 1000px;
 
+
 }
 
 .flashcard__inner {
@@ -72,6 +84,7 @@ a:active {
     transition: transform 1s;
     transform-style: preserve-3d;
     position: relative;
+
 }
 
 .flashcard__inner.is-fliped {
@@ -91,7 +104,7 @@ a:active {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
     /* display: flex;
     justify-content: center;
-    align-items: flex-start; */
+    align-items: center; */
     background-color: aqua;
     position: absolute;
 }
@@ -115,25 +128,6 @@ a:active {
 
 .fa-minus:hover {
     color: red;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-button {
-    padding: 0.35em;
-    border: 1px solid black;
-    border-radius: 3px;
-    box-shadow: 3px 3px 2px orangered;
-    background: white;
-    cursor: pointer;
-}
-
-.counter {
-    margin: 10px;
-    font-style: oblique;
-    font-size: 0.7rem;
 }
 
 iframe {

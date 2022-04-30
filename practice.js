@@ -3,9 +3,32 @@ const buttonNext = document.querySelector(".button-next");
 const buttonPrev = document.querySelector(".button-prev")
 
 let cardIndex = 0;
-let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem("items"))
-    : [];
 
+let pacificMusic = [
+    {
+        "myQuestion": "https://www.youtube.com/embed/NVEwxS268u4",
+        "myAnswer": "Currulao"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/O9KpKPRkIQ0",
+        "myAnswer": "Abozao"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/V9wMFh-zxJ0",
+        "myAnswer": "Calipso"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/Nie8Rbtz_z0",
+        "myAnswer": "Violines Caucanos"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/vtayPSLAGBo",
+        "myAnswer": "Bunde"
+    }
+]
+
+let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem("items"))
+    : pacificMusic;
 
 flashCardMaker(contentArray[cardIndex])
 
@@ -33,9 +56,7 @@ function flashCardMaker(text, delThisIndex) {
     const flashcardFaceBack = document.querySelector(".flashcard__body");
     const counter = document.querySelector(".counter");
 
-    // iframe.src = text.myQuestion + "?showinfo=0&modestbranding=1";
     iframe.src = text.myQuestion + "?autoplay=1&modestbranding=1&rel=0";
-    // modestbranding=1&controls=0&rel=0&
     flashcardFaceBack.textContent = text.myAnswer;
     console.log(cardIndex)
     counter.textContent = `${cardIndex + 1}/${contentArray.length}`;
@@ -45,5 +66,6 @@ function flashCardMaker(text, delThisIndex) {
 flashcardInner.addEventListener("click", () => {
     flashcardInner.classList.toggle("is-fliped");
 })
+
 
 

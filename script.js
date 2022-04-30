@@ -5,12 +5,35 @@ const buttonDelete = document.querySelector(".button-delete");
 
 
 const createCard = document.querySelector(".create-card");
-const flashcards = document.querySelector(".flashcards")
+const flashcards = document.querySelector(".flashcards");
+
+let pacificMusic = [
+    {
+        "myQuestion": "https://www.youtube.com/embed/NVEwxS268u4",
+        "myAnswer": "Currulao"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/O9KpKPRkIQ0",
+        "myAnswer": "Abozao"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/V9wMFh-zxJ0",
+        "myAnswer": "Calipso"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/Nie8Rbtz_z0",
+        "myAnswer": "Violines Caucanos"
+    },
+    {
+        "myQuestion": "https://www.youtube.com/embed/vtayPSLAGBo",
+        "myAnswer": "Bunde"
+    }
+]
 
 
 // Evaluate if we are already using localStorage to return the information stored
 let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem("items"))
-    : [];
+    : pacificMusic;
 
 contentArray.forEach(flashCardMaker);
 
